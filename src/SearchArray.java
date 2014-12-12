@@ -27,6 +27,23 @@ public class SearchArray {
 	}
 	
 	/**
+	 * 
+	 * @param val
+	 * @return index of val or -1 if not found
+	 */
+	public int find(int val) {
+		// linear search -- walk thru array comparing each value
+		int indx = -1; // not found
+		for (int i = 0; i <= nElems; i++) {
+			if (arr[i] == val) {
+				indx = i;
+				break;
+			}
+		}
+		return indx;
+	}
+	
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -49,6 +66,25 @@ public class SearchArray {
 		}
 
 		sa.display();
+		
+		// find a value
+		System.out.println();
+		
+		int indx = sa.find(5);
+		
+		if (indx == -1) {
+			System.out.println("Value 5 not found");
+		} else {
+			System.out.println("Value 5 found at index "+ indx);
+		}
+		
+		indx = sa.find(12); // not included in number 1..10
+		
+		if (indx == -1) {
+			System.out.println("Value 12 not found");
+		} else {
+			System.out.println("Value 12 found at index "+ indx);
+		}
 	}
 
 }
