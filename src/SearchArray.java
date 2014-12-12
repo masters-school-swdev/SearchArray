@@ -22,7 +22,7 @@ public class SearchArray {
 	
 	public void display() {
 		for (int i = 0; i <= nElems; i++) { // including last index
-			System.out.println("index " + i + " = " + arr[i]);
+			System.out.print(arr[i] + " ");
 		}
 	}
 	
