@@ -31,24 +31,20 @@ public class SearchArray {
 	 */
 	public static void main(String[] args) {
 		
-		int maxSize = 20;
-		int maxNumber = 10; // must be less than maxSize
-		if (maxNumber > maxSize) {
-			System.err.println("maxNumber must be less than or equal to maxSize");
-			System.exit(1);
-		}
-		SearchArray sa = new SearchArray(maxSize);
+		SearchArray sa = new SearchArray(10);
 		
-		List<Integer> list = new ArrayList<Integer>();
-		for (int i=1; i<= maxNumber; i++) {
-			list.add(i);
-		}
-		Collections.shuffle(list);
-		for (int val : list) {
-			sa.insert(val);
-		}
-
+		sa.insert(77);
+		sa.insert(31);
+		sa.insert(56);
+		sa.insert(23);
+		sa.insert(14);
+		sa.insert(5);
+		sa.insert(99);
+		
 		sa.display();
+		
+		System.out.println();
+		
 	}
 
 }
